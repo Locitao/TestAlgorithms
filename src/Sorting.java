@@ -16,7 +16,7 @@ public class Sorting{
         Player testPlayer = new Player(7916253, 500);
         long time = System.nanoTime();
         Match testMatch = ProcedureAlgorithm(players, testPlayer);
-        System.out.println(((System.nanoTime() - time) / 100000) + " Duration of search in milliseconds.");
+        System.out.println(((System.nanoTime() - time) / 100000) + " Duration of search in milliseconds without sorting the array.");
         System.out.println(testMatch.toString());
         FillList();
         Collections.sort(players);
@@ -27,7 +27,12 @@ public class Sorting{
         FillList();
         time = System.nanoTime();
         matchAllPlayers(players);
-        System.out.println(((System.nanoTime() - time) / 100000) + " Duration of search in milliseconds for all players.");
+        System.out.println(((System.nanoTime() - time) / 100000) + " Duration of search in milliseconds for all players before sorting array.");
+        FillList();
+        Collections.sort(players);
+        time = System.nanoTime();
+        matchAllPlayers(players);
+        System.out.println(((System.nanoTime() - time) / 100000) + " Duration of search in milliseconds for all players after sorting array.");
 
     }
 
