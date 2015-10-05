@@ -16,13 +16,13 @@ public class Sorting{
         Player testPlayer = new Player(7916253, 500);
         long time = System.nanoTime();
         Match testMatch = ProcedureAlgorithm(players, testPlayer);
-        System.out.println(((System.nanoTime() - time) / 100000) + " Duration of search in milliseconds without sorting the array.");
+        System.out.println(((System.nanoTime() - time) / 100000) + " Duration of search for a single player in milliseconds without sorting the array.");
         System.out.println(testMatch.toString());
         FillList();
         Collections.sort(players);
         time = System.nanoTime();
         testMatch = ProcedureAlgorithm(players, testPlayer);
-        System.out.println(((System.nanoTime() - time) / 100000) + " Duration of search in milliseconds after sorting the array.");
+        System.out.println(((System.nanoTime() - time) / 100000) + " Duration of search for a single player in milliseconds after sorting the array.");
         System.out.println(testMatch.toString());
         FillList();
         time = System.nanoTime();
